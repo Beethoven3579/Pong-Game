@@ -4,5 +4,6 @@
     border: border-box;
 }
 body {
+    margin-top: 60px;
     text-align: center;
 }

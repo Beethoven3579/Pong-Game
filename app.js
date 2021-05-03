@@ -111,6 +111,12 @@ function moveEverything () {
      }
 }
 
+function drawNet() {
+    for (let i = 0; i < canvas.height; i += 45) {
+        colorRect(canvas.width/2 - 1, i , 2, 20, 'white')
+    }
+} 
+
 function drawEverything() {
     colorRect(0,0,canvas.width, canvas.height, 'black');
     if (showingWinScreen) {
@@ -126,6 +132,7 @@ function drawEverything() {
         canvasContext.fillText("Click to Continue.", 350, 400)
         return;
     }
+    drawNet();
     colorRect(0, paddle1Y, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
     colorRect(canvas.width - PADDLE_WIDTH, paddle2Y, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
     colorCircle(ballX, ballY, 10, 'white')

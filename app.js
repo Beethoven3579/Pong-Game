@@ -42,7 +42,7 @@ window.onload = function () {
     setInterval(() => {
         moveEverything ();
         drawEverything();
-    }, 1000/framesPerSecond);  
+    }, 600/ framesPerSecond);  
 
     canvas.addEventListener('mousedown', handleMouseClick)
     canvas.addEventListener('mousemove', (e) => {
@@ -64,9 +64,9 @@ function ballReset() {
 function computerMovement() {
     let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT / 2)
     if(paddle2YCenter < ballY) {
-        paddle2Y += 6; 
+        paddle2Y += 12; 
     }else if (paddle2YCenter > ballY + 35){
-        paddle2Y -= 6;
+        paddle2Y -= 12;
     }
 }
 
